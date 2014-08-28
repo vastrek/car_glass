@@ -1,0 +1,15 @@
+2014/08/27 17:29:41 [error] [exception.CException] exception 'CException' with message 'AdminController cannot find the requested view "index".' in E:\workspace\car_glass\framework\web\CController.php:878
+Stack trace:
+#0 E:\workspace\car_glass\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#1 E:\workspace\car_glass\webroot\protected\controllers\AdminController.php(27): CController->render('index')
+#2 E:\workspace\car_glass\framework\web\actions\CInlineAction.php(49): AdminController->actionIndex()
+#3 E:\workspace\car_glass\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 E:\workspace\car_glass\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 E:\workspace\car_glass\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 E:\workspace\car_glass\framework\web\CWebApplication.php(282): CController->run('')
+#7 E:\workspace\car_glass\framework\web\CWebApplication.php(141): CWebApplication->runController('admin')
+#8 E:\workspace\car_glass\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 E:\workspace\car_glass\webroot\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/admin
+---
