@@ -5,3 +5,12 @@ cd /dE:\workspace\car_glass\framework
 yiic webapp ..\webroot
 
 ÅäÖÃnginx
+
+
+E:\workspace\car_glass\webroot>.\protected\yiic shell
+
+model Admin admin
+
+crud Admin
+
+

@@ -13,3 +13,573 @@ Stack trace:
 #10 {main}
 REQUEST_URI=/admin
 ---
+2014/08/28 14:49:09 [error] [php] include(User.php): failed to open stream: No such file or directory (E:\workspace\car_glass\framework\YiiBase.php:427)
+Stack trace:
+#0 E:\workspace\car_glass\webroot\protected\controllers\AdminController.php(27): spl_autoload_call()
+#1 E:\workspace\car_glass\framework\web\actions\CInlineAction.php(49): AdminController->actionIndex()
+#2 E:\workspace\car_glass\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 E:\workspace\car_glass\framework\web\CController.php(286): AdminController->runAction()
+#4 E:\workspace\car_glass\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#5 E:\workspace\car_glass\framework\web\CWebApplication.php(282): AdminController->run()
+#6 E:\workspace\car_glass\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 E:\workspace\car_glass\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 E:\workspace\car_glass\webroot\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin
+in E:\workspace\car_glass\webroot\protected\controllers\AdminController.php (27)
+in E:\workspace\car_glass\webroot\index.php (13)
+2014/08/28 14:49:50 [error] [php] include(navbar.php): failed to open stream: No such file or directory (E:\workspace\car_glass\webroot\protected\views\admin\index.php:59)
+Stack trace:
+#0 E:\workspace\car_glass\framework\web\CBaseController.php(95): AdminController->renderInternal()
+#1 E:\workspace\car_glass\framework\web\CController.php(869): AdminController->renderFile()
+#2 E:\workspace\car_glass\framework\web\CController.php(782): AdminController->renderPartial()
+#3 E:\workspace\car_glass\webroot\protected\controllers\AdminController.php(29): AdminController->render()
+#4 E:\workspace\car_glass\framework\web\actions\CInlineAction.php(49): AdminController->actionIndex()
+#5 E:\workspace\car_glass\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 E:\workspace\car_glass\framework\web\CController.php(286): AdminController->runAction()
+#7 E:\workspace\car_glass\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#8 E:\workspace\car_glass\framework\web\CWebApplication.php(282): AdminController->run()
+#9 E:\workspace\car_glass\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 E:\workspace\car_glass\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\workspace\car_glass\webroot\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin
+in E:\workspace\car_glass\webroot\protected\views\admin\index.php (59)
+in E:\workspace\car_glass\webroot\protected\views\admin\index.php (59)
+in E:\workspace\car_glass\webroot\protected\controllers\AdminController.php (29)
+2014/08/28 14:58:18 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: '' for column 'created_at' at row 1. The SQL statement executed was: INSERT INTO `admin` (`username`, `email`, `password`, `is_deleted`, `created_at`, `updated_at`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5).
+in E:\workspace\car_glass\webroot\protected\controllers\AdminController.php (76)
+in E:\workspace\car_glass\webroot\index.php (13)
+2014/08/28 14:58:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: '' for column 'created_at' at row 1. The SQL statement executed was: INSERT INTO `admin` (`username`, `email`, `password`, `is_deleted`, `created_at`, `updated_at`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5)' in E:\workspace\car_glass\framework\db\CDbCommand.php:358
+Stack trace:
+#0 E:\workspace\car_glass\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 E:\workspace\car_glass\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 E:\workspace\car_glass\webroot\protected\controllers\AdminController.php(76): CActiveRecord->save()
+#3 E:\workspace\car_glass\framework\web\actions\CInlineAction.php(49): AdminController->actionCreate()
+#4 E:\workspace\car_glass\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 E:\workspace\car_glass\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 E:\workspace\car_glass\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 E:\workspace\car_glass\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 E:\workspace\car_glass\framework\web\CController.php(291): CFilterChain->run()
+#11 E:\workspace\car_glass\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\workspace\car_glass\framework\web\CWebApplication.php(282): CController->run('create')
+#13 E:\workspace\car_glass\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/create')
+#14 E:\workspace\car_glass\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 E:\workspace\car_glass\webroot\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/admin/create
+HTTP_REFERER=http://car-glass.dev/admin/create
+---
+2014/08/28 16:17:21 [error] [php] Undefined variable: user (E:\workspace\car_glass\webroot\protected\views\layouts\index.php:66)
+Stack trace:
+#0 E:\workspace\car_glass\framework\web\CController.php(784): AdminController->renderFile()
+#1 E:\workspace\car_glass\webroot\protected\controllers\AdminController.php(135): AdminController->render()
+#2 E:\workspace\car_glass\framework\web\actions\CInlineAction.php(49): AdminController->actionIndex()
+#3 E:\workspace\car_glass\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(133): AdminController->runAction()
+#5 E:\workspace\car_glass\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 E:\workspace\car_glass\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#7 E:\workspace\car_glass\framework\web\filters\CInlineFilter.php(58): AdminController->filterAccessControl()
+#8 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#9 E:\workspace\car_glass\framework\web\CController.php(291): CFilterChain->run()
+#10 E:\workspace\car_glass\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#11 E:\workspace\car_glass\framework\web\CWebApplication.php(282): AdminController->run()
+#12 E:\workspace\car_glass\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 E:\workspace\car_glass\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 E:\workspace\car_glass\webroot\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/
+in E:\workspace\car_glass\webroot\protected\views\layouts\index.php (66)
+in E:\workspace\car_glass\webroot\protected\controllers\AdminController.php (135)
+in E:\workspace\car_glass\webroot\index.php (13)
+2014/08/28 16:18:15 [error] [php] Undefined variable: sitename (E:\workspace\car_glass\webroot\protected\views\layouts\index.php:78)
+Stack trace:
+#0 E:\workspace\car_glass\framework\web\CController.php(784): AdminController->renderFile()
+#1 E:\workspace\car_glass\webroot\protected\controllers\AdminController.php(135): AdminController->render()
+#2 E:\workspace\car_glass\framework\web\actions\CInlineAction.php(49): AdminController->actionIndex()
+#3 E:\workspace\car_glass\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(133): AdminController->runAction()
+#5 E:\workspace\car_glass\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 E:\workspace\car_glass\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#7 E:\workspace\car_glass\framework\web\filters\CInlineFilter.php(58): AdminController->filterAccessControl()
+#8 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#9 E:\workspace\car_glass\framework\web\CController.php(291): CFilterChain->run()
+#10 E:\workspace\car_glass\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#11 E:\workspace\car_glass\framework\web\CWebApplication.php(282): AdminController->run()
+#12 E:\workspace\car_glass\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 E:\workspace\car_glass\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 E:\workspace\car_glass\webroot\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/
+in E:\workspace\car_glass\webroot\protected\views\layouts\index.php (78)
+in E:\workspace\car_glass\webroot\protected\controllers\AdminController.php (135)
+in E:\workspace\car_glass\webroot\index.php (13)
+2014/08/28 16:19:02 [error] [php] Undefined variable: sitename (E:\workspace\car_glass\webroot\protected\views\layouts\index.php:124)
+Stack trace:
+#0 E:\workspace\car_glass\framework\web\CController.php(784): AdminController->renderFile()
+#1 E:\workspace\car_glass\webroot\protected\controllers\AdminController.php(135): AdminController->render()
+#2 E:\workspace\car_glass\framework\web\actions\CInlineAction.php(49): AdminController->actionIndex()
+#3 E:\workspace\car_glass\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(133): AdminController->runAction()
+#5 E:\workspace\car_glass\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 E:\workspace\car_glass\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#7 E:\workspace\car_glass\framework\web\filters\CInlineFilter.php(58): AdminController->filterAccessControl()
+#8 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#9 E:\workspace\car_glass\framework\web\CController.php(291): CFilterChain->run()
+#10 E:\workspace\car_glass\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#11 E:\workspace\car_glass\framework\web\CWebApplication.php(282): AdminController->run()
+#12 E:\workspace\car_glass\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 E:\workspace\car_glass\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 E:\workspace\car_glass\webroot\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/
+in E:\workspace\car_glass\webroot\protected\views\layouts\index.php (124)
+in E:\workspace\car_glass\webroot\protected\controllers\AdminController.php (135)
+in E:\workspace\car_glass\webroot\index.php (13)
+2014/08/28 16:35:20 [error] [php] Undefined variable: dataProvider (E:\workspace\car_glass\webroot\protected\views\admin\index.php:15)
+Stack trace:
+#0 E:\workspace\car_glass\framework\web\CController.php(869): AdminController->renderFile()
+#1 E:\workspace\car_glass\framework\web\CController.php(782): AdminController->renderPartial()
+#2 E:\workspace\car_glass\webroot\protected\controllers\AdminController.php(132): AdminController->render()
+#3 E:\workspace\car_glass\framework\web\actions\CInlineAction.php(49): AdminController->actionIndex()
+#4 E:\workspace\car_glass\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(133): AdminController->runAction()
+#6 E:\workspace\car_glass\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 E:\workspace\car_glass\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 E:\workspace\car_glass\framework\web\filters\CInlineFilter.php(58): AdminController->filterAccessControl()
+#9 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 E:\workspace\car_glass\framework\web\CController.php(291): CFilterChain->run()
+#11 E:\workspace\car_glass\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#12 E:\workspace\car_glass\framework\web\CWebApplication.php(282): AdminController->run()
+#13 E:\workspace\car_glass\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 E:\workspace\car_glass\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 E:\workspace\car_glass\webroot\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/
+in E:\workspace\car_glass\webroot\protected\views\admin\index.php (15)
+in E:\workspace\car_glass\webroot\protected\controllers\AdminController.php (132)
+in E:\workspace\car_glass\webroot\index.php (13)
+2014/08/28 16:37:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in E:\workspace\car_glass\framework\web\CController.php:483
+Stack trace:
+#0 E:\workspace\car_glass\framework\web\CController.php(270): CController->missingAction('login')
+#1 E:\workspace\car_glass\framework\web\CWebApplication.php(282): CController->run('login')
+#2 E:\workspace\car_glass\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/login')
+#3 E:\workspace\car_glass\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\workspace\car_glass\webroot\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/login
+---
+2014/08/28 16:42:14 [error] [php] A session had already been started - ignoring session_start() (E:\workspace\car_glass\webroot\protected\views\admin\login.php:2)
+Stack trace:
+#0 E:\workspace\car_glass\framework\web\CBaseController.php(95): AdminController->renderInternal()
+#1 E:\workspace\car_glass\framework\web\CController.php(869): AdminController->renderFile()
+#2 E:\workspace\car_glass\framework\web\CController.php(782): AdminController->renderPartial()
+#3 E:\workspace\car_glass\webroot\protected\controllers\AdminController.php(182): AdminController->render()
+#4 E:\workspace\car_glass\framework\web\actions\CInlineAction.php(49): AdminController->actionLogin()
+#5 E:\workspace\car_glass\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(133): AdminController->runAction()
+#7 E:\workspace\car_glass\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 E:\workspace\car_glass\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#9 E:\workspace\car_glass\framework\web\filters\CInlineFilter.php(58): AdminController->filterAccessControl()
+#10 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#11 E:\workspace\car_glass\framework\web\CController.php(291): CFilterChain->run()
+#12 E:\workspace\car_glass\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#13 E:\workspace\car_glass\framework\web\CWebApplication.php(282): AdminController->run()
+#14 E:\workspace\car_glass\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 E:\workspace\car_glass\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 E:\workspace\car_glass\webroot\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/login
+in E:\workspace\car_glass\webroot\protected\views\admin\login.php (2)
+in E:\workspace\car_glass\webroot\protected\controllers\AdminController.php (182)
+in E:\workspace\car_glass\webroot\index.php (13)
+2014/08/28 16:43:13 [error] [php] Undefined variable: sitename (E:\workspace\car_glass\webroot\protected\views\admin\login.php:8)
+Stack trace:
+#0 E:\workspace\car_glass\framework\web\CController.php(869): AdminController->renderFile()
+#1 E:\workspace\car_glass\framework\web\CController.php(782): AdminController->renderPartial()
+#2 E:\workspace\car_glass\webroot\protected\controllers\AdminController.php(182): AdminController->render()
+#3 E:\workspace\car_glass\framework\web\actions\CInlineAction.php(49): AdminController->actionLogin()
+#4 E:\workspace\car_glass\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(133): AdminController->runAction()
+#6 E:\workspace\car_glass\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 E:\workspace\car_glass\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 E:\workspace\car_glass\framework\web\filters\CInlineFilter.php(58): AdminController->filterAccessControl()
+#9 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 E:\workspace\car_glass\framework\web\CController.php(291): CFilterChain->run()
+#11 E:\workspace\car_glass\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#12 E:\workspace\car_glass\framework\web\CWebApplication.php(282): AdminController->run()
+#13 E:\workspace\car_glass\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 E:\workspace\car_glass\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 E:\workspace\car_glass\webroot\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/login
+in E:\workspace\car_glass\webroot\protected\views\admin\login.php (8)
+in E:\workspace\car_glass\webroot\protected\controllers\AdminController.php (182)
+in E:\workspace\car_glass\webroot\index.php (13)
+2014/08/28 16:43:27 [error] [php] Undefined variable: sitename (E:\workspace\car_glass\webroot\protected\views\admin\login.php:96)
+Stack trace:
+#0 E:\workspace\car_glass\framework\web\CController.php(869): AdminController->renderFile()
+#1 E:\workspace\car_glass\framework\web\CController.php(782): AdminController->renderPartial()
+#2 E:\workspace\car_glass\webroot\protected\controllers\AdminController.php(182): AdminController->render()
+#3 E:\workspace\car_glass\framework\web\actions\CInlineAction.php(49): AdminController->actionLogin()
+#4 E:\workspace\car_glass\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(133): AdminController->runAction()
+#6 E:\workspace\car_glass\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 E:\workspace\car_glass\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 E:\workspace\car_glass\framework\web\filters\CInlineFilter.php(58): AdminController->filterAccessControl()
+#9 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 E:\workspace\car_glass\framework\web\CController.php(291): CFilterChain->run()
+#11 E:\workspace\car_glass\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#12 E:\workspace\car_glass\framework\web\CWebApplication.php(282): AdminController->run()
+#13 E:\workspace\car_glass\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 E:\workspace\car_glass\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 E:\workspace\car_glass\webroot\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/login
+in E:\workspace\car_glass\webroot\protected\views\admin\login.php (96)
+in E:\workspace\car_glass\webroot\protected\controllers\AdminController.php (182)
+in E:\workspace\car_glass\webroot\index.php (13)
+2014/08/28 17:03:55 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in E:\workspace\car_glass\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 E:\workspace\car_glass\framework\web\auth\CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 E:\workspace\car_glass\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#2 E:\workspace\car_glass\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 E:\workspace\car_glass\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 E:\workspace\car_glass\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\workspace\car_glass\framework\web\CController.php(291): CFilterChain->run()
+#7 E:\workspace\car_glass\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\workspace\car_glass\framework\web\CWebApplication.php(282): CController->run('loginAction')
+#9 E:\workspace\car_glass\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/loginActi...')
+#10 E:\workspace\car_glass\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\workspace\car_glass\webroot\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/admin/loginAction
+HTTP_REFERER=http://car-glass.dev/admin/login
+---
+2014/08/29 11:16:48 [error] [php] Undefined variable: name (E:\workspace\car_glass\webroot\protected\controllers\AdminController.php:183)
+Stack trace:
+#0 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(133): AdminController->runAction()
+#1 E:\workspace\car_glass\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 E:\workspace\car_glass\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 E:\workspace\car_glass\framework\web\filters\CInlineFilter.php(58): AdminController->filterAccessControl()
+#4 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 E:\workspace\car_glass\framework\web\CController.php(291): CFilterChain->run()
+#6 E:\workspace\car_glass\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#7 E:\workspace\car_glass\framework\web\CWebApplication.php(282): AdminController->run()
+#8 E:\workspace\car_glass\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 E:\workspace\car_glass\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 E:\workspace\car_glass\webroot\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/login
+in E:\workspace\car_glass\webroot\protected\controllers\AdminController.php (183)
+in E:\workspace\car_glass\webroot\index.php (13)
+2014/08/29 12:06:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "logout".' in E:\workspace\car_glass\framework\web\CController.php:483
+Stack trace:
+#0 E:\workspace\car_glass\framework\web\CController.php(270): CController->missingAction('logout')
+#1 E:\workspace\car_glass\framework\web\CWebApplication.php(282): CController->run('logout')
+#2 E:\workspace\car_glass\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/logout')
+#3 E:\workspace\car_glass\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\workspace\car_glass\webroot\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/logout
+HTTP_REFERER=http://car-glass.dev/admin/
+---
+2014/08/29 12:29:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "user".' in E:\workspace\car_glass\framework\web\CController.php:483
+Stack trace:
+#0 E:\workspace\car_glass\framework\web\CController.php(270): CController->missingAction('user')
+#1 E:\workspace\car_glass\framework\web\CWebApplication.php(282): CController->run('user')
+#2 E:\workspace\car_glass\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/user')
+#3 E:\workspace\car_glass\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\workspace\car_glass\webroot\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/user
+HTTP_REFERER=http://car-glass.dev/admin/
+---
+2014/08/29 13:35:15 [error] [php] include(Option.php): failed to open stream: No such file or directory (E:\workspace\car_glass\framework\YiiBase.php:427)
+Stack trace:
+#0 E:\workspace\car_glass\webroot\protected\views\layouts\index.php(78): spl_autoload_call()
+#1 E:\workspace\car_glass\framework\web\CBaseController.php(126): require()
+#2 E:\workspace\car_glass\framework\web\CBaseController.php(95): AdminController->renderInternal()
+#3 E:\workspace\car_glass\framework\web\CController.php(784): AdminController->renderFile()
+#4 E:\workspace\car_glass\webroot\protected\controllers\AdminController.php(132): AdminController->render()
+#5 E:\workspace\car_glass\framework\web\actions\CInlineAction.php(49): AdminController->actionIndex()
+#6 E:\workspace\car_glass\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(133): AdminController->runAction()
+#8 E:\workspace\car_glass\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 E:\workspace\car_glass\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 E:\workspace\car_glass\framework\web\filters\CInlineFilter.php(58): AdminController->filterAccessControl()
+#11 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 E:\workspace\car_glass\framework\web\CController.php(291): CFilterChain->run()
+#13 E:\workspace\car_glass\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#14 E:\workspace\car_glass\framework\web\CWebApplication.php(282): AdminController->run()
+#15 E:\workspace\car_glass\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 E:\workspace\car_glass\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 E:\workspace\car_glass\webroot\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/
+in E:\workspace\car_glass\webroot\protected\views\layouts\index.php (78)
+in E:\workspace\car_glass\webroot\protected\controllers\AdminController.php (132)
+in E:\workspace\car_glass\webroot\index.php (13)
+2014/08/29 16:37:00 [error] [php] strtolower() expects parameter 1 to be string, array given (E:\workspace\car_glass\framework\web\auth\CAccessControlFilter.php:115)
+Stack trace:
+#0 E:\workspace\car_glass\framework\web\CController.php(1144): CAccessControlFilter->setRules()
+#1 E:\workspace\car_glass\framework\web\filters\CInlineFilter.php(58): AdminController->filterAccessControl()
+#2 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#3 E:\workspace\car_glass\framework\web\CController.php(291): CFilterChain->run()
+#4 E:\workspace\car_glass\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#5 E:\workspace\car_glass\framework\web\CWebApplication.php(282): AdminController->run()
+#6 E:\workspace\car_glass\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 E:\workspace\car_glass\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 E:\workspace\car_glass\webroot\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/
+in E:\workspace\car_glass\webroot\index.php (13)
+2014/08/29 16:37:17 [error] [php] strtolower() expects parameter 1 to be string, array given (E:\workspace\car_glass\framework\web\auth\CAccessControlFilter.php:115)
+Stack trace:
+#0 E:\workspace\car_glass\framework\web\CController.php(1144): CAccessControlFilter->setRules()
+#1 E:\workspace\car_glass\framework\web\filters\CInlineFilter.php(58): AdminController->filterAccessControl()
+#2 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#3 E:\workspace\car_glass\framework\web\CController.php(291): CFilterChain->run()
+#4 E:\workspace\car_glass\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#5 E:\workspace\car_glass\framework\web\CWebApplication.php(282): AdminController->run()
+#6 E:\workspace\car_glass\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 E:\workspace\car_glass\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 E:\workspace\car_glass\webroot\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/
+in E:\workspace\car_glass\webroot\index.php (13)
+2014/09/01 13:20:24 [error] [exception.CException] exception 'CException' with message 'Property "Admin._identity" is not defined.' in E:\workspace\car_glass\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\workspace\car_glass\framework\db\ar\CActiveRecord.php(145): CComponent->__get('_identity')
+#1 E:\workspace\car_glass\webroot\protected\models\Admin.php(123): CActiveRecord->__get('_identity')
+#2 E:\workspace\car_glass\webroot\protected\controllers\AdminController.php(196): Admin->login('admin', '123456')
+#3 E:\workspace\car_glass\framework\web\actions\CInlineAction.php(49): AdminController->actionLoginAction()
+#4 E:\workspace\car_glass\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 E:\workspace\car_glass\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 E:\workspace\car_glass\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 E:\workspace\car_glass\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 E:\workspace\car_glass\framework\web\CController.php(291): CFilterChain->run()
+#11 E:\workspace\car_glass\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\workspace\car_glass\framework\web\CWebApplication.php(282): CController->run('loginAction')
+#13 E:\workspace\car_glass\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/loginActi...')
+#14 E:\workspace\car_glass\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 E:\workspace\car_glass\webroot\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/admin/loginAction
+HTTP_REFERER=http://car-glass.dev/admin/login
+---
+2014/09/01 13:21:09 [error] [exception.CException] exception 'CException' with message 'Property "Admin._identity" is not defined.' in E:\workspace\car_glass\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\workspace\car_glass\framework\db\ar\CActiveRecord.php(145): CComponent->__get('_identity')
+#1 E:\workspace\car_glass\webroot\protected\models\Admin.php(123): CActiveRecord->__get('_identity')
+#2 E:\workspace\car_glass\webroot\protected\controllers\AdminController.php(196): Admin->login('admin', '123456')
+#3 E:\workspace\car_glass\framework\web\actions\CInlineAction.php(49): AdminController->actionLoginAction()
+#4 E:\workspace\car_glass\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 E:\workspace\car_glass\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 E:\workspace\car_glass\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 E:\workspace\car_glass\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 E:\workspace\car_glass\framework\web\CController.php(291): CFilterChain->run()
+#11 E:\workspace\car_glass\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\workspace\car_glass\framework\web\CWebApplication.php(282): CController->run('loginAction')
+#13 E:\workspace\car_glass\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/loginActi...')
+#14 E:\workspace\car_glass\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 E:\workspace\car_glass\webroot\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/admin/loginAction
+HTTP_REFERER=http://car-glass.dev/admin/login
+---
+2014/09/01 13:24:09 [error] [exception.CException] exception 'CException' with message 'Property "Admin._identity" is not defined.' in E:\workspace\car_glass\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\workspace\car_glass\framework\db\ar\CActiveRecord.php(145): CComponent->__get('_identity')
+#1 E:\workspace\car_glass\webroot\protected\models\Admin.php(123): CActiveRecord->__get('_identity')
+#2 E:\workspace\car_glass\webroot\protected\controllers\AdminController.php(196): Admin->login('admin', '123456')
+#3 E:\workspace\car_glass\framework\web\actions\CInlineAction.php(49): AdminController->actionLoginAction()
+#4 E:\workspace\car_glass\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 E:\workspace\car_glass\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 E:\workspace\car_glass\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 E:\workspace\car_glass\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 E:\workspace\car_glass\framework\web\CController.php(291): CFilterChain->run()
+#11 E:\workspace\car_glass\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\workspace\car_glass\framework\web\CWebApplication.php(282): CController->run('loginAction')
+#13 E:\workspace\car_glass\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/loginActi...')
+#14 E:\workspace\car_glass\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 E:\workspace\car_glass\webroot\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/admin/loginAction
+HTTP_REFERER=http://car-glass.dev/admin/login
+---
+2014/09/01 13:31:44 [error] [exception.CException] exception 'CException' with message 'Property "Admin.rememberMe" is not defined.' in E:\workspace\car_glass\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\workspace\car_glass\framework\db\ar\CActiveRecord.php(145): CComponent->__get('rememberMe')
+#1 E:\workspace\car_glass\webroot\protected\models\Admin.php(129): CActiveRecord->__get('rememberMe')
+#2 E:\workspace\car_glass\webroot\protected\controllers\AdminController.php(196): Admin->login('admin', '123456')
+#3 E:\workspace\car_glass\framework\web\actions\CInlineAction.php(49): AdminController->actionLoginAction()
+#4 E:\workspace\car_glass\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 E:\workspace\car_glass\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 E:\workspace\car_glass\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 E:\workspace\car_glass\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 E:\workspace\car_glass\framework\web\CController.php(291): CFilterChain->run()
+#11 E:\workspace\car_glass\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\workspace\car_glass\framework\web\CWebApplication.php(282): CController->run('loginAction')
+#13 E:\workspace\car_glass\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/loginActi...')
+#14 E:\workspace\car_glass\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 E:\workspace\car_glass\webroot\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/admin/loginAction
+HTTP_REFERER=http://car-glass.dev/admin/login
+---
+2014/09/01 13:33:24 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in E:\workspace\car_glass\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 E:\workspace\car_glass\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 E:\workspace\car_glass\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 E:\workspace\car_glass\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 E:\workspace\car_glass\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 E:\workspace\car_glass\framework\web\CController.php(291): CFilterChain->run()
+#6 E:\workspace\car_glass\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 E:\workspace\car_glass\framework\web\CWebApplication.php(282): CController->run('')
+#8 E:\workspace\car_glass\framework\web\CWebApplication.php(141): CWebApplication->runController('admin')
+#9 E:\workspace\car_glass\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 E:\workspace\car_glass\webroot\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/admin/
+HTTP_REFERER=http://car-glass.dev/admin/login
+---
+2014/09/01 13:33:37 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in E:\workspace\car_glass\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 E:\workspace\car_glass\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 E:\workspace\car_glass\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 E:\workspace\car_glass\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 E:\workspace\car_glass\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 E:\workspace\car_glass\framework\web\CController.php(291): CFilterChain->run()
+#6 E:\workspace\car_glass\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 E:\workspace\car_glass\framework\web\CWebApplication.php(282): CController->run('')
+#8 E:\workspace\car_glass\framework\web\CWebApplication.php(141): CWebApplication->runController('admin')
+#9 E:\workspace\car_glass\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 E:\workspace\car_glass\webroot\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/admin/
+---
+2014/09/01 13:39:38 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in E:\workspace\car_glass\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 E:\workspace\car_glass\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 E:\workspace\car_glass\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 E:\workspace\car_glass\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 E:\workspace\car_glass\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 E:\workspace\car_glass\framework\web\CController.php(291): CFilterChain->run()
+#6 E:\workspace\car_glass\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 E:\workspace\car_glass\framework\web\CWebApplication.php(282): CController->run('')
+#8 E:\workspace\car_glass\framework\web\CWebApplication.php(141): CWebApplication->runController('admin')
+#9 E:\workspace\car_glass\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 E:\workspace\car_glass\webroot\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/admin/
+---
+2014/09/01 13:39:52 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in E:\workspace\car_glass\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 E:\workspace\car_glass\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 E:\workspace\car_glass\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 E:\workspace\car_glass\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 E:\workspace\car_glass\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 E:\workspace\car_glass\framework\web\CController.php(291): CFilterChain->run()
+#6 E:\workspace\car_glass\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 E:\workspace\car_glass\framework\web\CWebApplication.php(282): CController->run('')
+#8 E:\workspace\car_glass\framework\web\CWebApplication.php(141): CWebApplication->runController('admin')
+#9 E:\workspace\car_glass\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 E:\workspace\car_glass\webroot\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/admin/
+HTTP_REFERER=http://car-glass.dev/admin/login
+---
+2014/09/01 13:40:59 [error] [exception.CException] exception 'CException' with message 'Unable to add an item whose name is the same as an existing item.' in E:\workspace\car_glass\framework\web\auth\CPhpAuthManager.php:289
+Stack trace:
+#0 E:\workspace\car_glass\framework\web\auth\CAuthManager.php(72): CPhpAuthManager->createAuthItem('root', 2, 'administrator', 'return Yii::app...', NULL)
+#1 E:\workspace\car_glass\webroot\protected\models\Admin.php(136): CAuthManager->createRole('root', 'administrator', 'return Yii::app...')
+#2 E:\workspace\car_glass\webroot\protected\controllers\AdminController.php(196): Admin->login('admin', '123456')
+#3 E:\workspace\car_glass\framework\web\actions\CInlineAction.php(49): AdminController->actionLoginAction()
+#4 E:\workspace\car_glass\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 E:\workspace\car_glass\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 E:\workspace\car_glass\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 E:\workspace\car_glass\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 E:\workspace\car_glass\framework\web\CController.php(291): CFilterChain->run()
+#11 E:\workspace\car_glass\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\workspace\car_glass\framework\web\CWebApplication.php(282): CController->run('loginAction')
+#13 E:\workspace\car_glass\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/loginActi...')
+#14 E:\workspace\car_glass\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 E:\workspace\car_glass\webroot\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/admin/loginAction
+HTTP_REFERER=http://car-glass.dev/admin/login
+---
+2014/09/01 13:41:28 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in E:\workspace\car_glass\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 E:\workspace\car_glass\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 E:\workspace\car_glass\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 E:\workspace\car_glass\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 E:\workspace\car_glass\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 E:\workspace\car_glass\framework\web\CController.php(291): CFilterChain->run()
+#6 E:\workspace\car_glass\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 E:\workspace\car_glass\framework\web\CWebApplication.php(282): CController->run('')
+#8 E:\workspace\car_glass\framework\web\CWebApplication.php(141): CWebApplication->runController('admin')
+#9 E:\workspace\car_glass\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 E:\workspace\car_glass\webroot\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/admin/
+HTTP_REFERER=http://car-glass.dev/admin/login
+---
+2014/09/01 14:10:09 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'car_glass.authitem' doesn't exist. The SQL statement executed was: INSERT INTO `AuthItem` (`name`, `type`, `description`, `bizrule`, `data`) VALUES (:name, :type, :description, :bizrule, :data).
+in E:\workspace\car_glass\webroot\protected\models\Admin.php (134)
+in E:\workspace\car_glass\webroot\protected\controllers\AdminController.php (197)
+in E:\workspace\car_glass\webroot\index.php (13)
+2014/09/01 14:10:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'car_glass.authitem' doesn't exist. The SQL statement executed was: INSERT INTO `AuthItem` (`name`, `type`, `description`, `bizrule`, `data`) VALUES (:name, :type, :description, :bizrule, :data)' in E:\workspace\car_glass\framework\db\CDbCommand.php:358
+Stack trace:
+#0 E:\workspace\car_glass\framework\db\CDbCommand.php(1250): CDbCommand->execute(Array)
+#1 E:\workspace\car_glass\framework\web\auth\CDbAuthManager.php(444): CDbCommand->insert('AuthItem', Array)
+#2 E:\workspace\car_glass\framework\web\auth\CAuthManager.php(72): CDbAuthManager->createAuthItem('root', 2, 'administrator', 'return !Yii::ap...', NULL)
+#3 E:\workspace\car_glass\webroot\protected\models\Admin.php(134): CAuthManager->createRole('root', 'administrator', 'return !Yii::ap...')
+#4 E:\workspace\car_glass\webroot\protected\controllers\AdminController.php(197): Admin->login('admin', '123456')
+#5 E:\workspace\car_glass\framework\web\actions\CInlineAction.php(49): AdminController->actionLoginAction()
+#6 E:\workspace\car_glass\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 E:\workspace\car_glass\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 E:\workspace\car_glass\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 E:\workspace\car_glass\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 E:\workspace\car_glass\framework\web\CController.php(291): CFilterChain->run()
+#13 E:\workspace\car_glass\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 E:\workspace\car_glass\framework\web\CWebApplication.php(282): CController->run('loginAction')
+#15 E:\workspace\car_glass\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/loginActi...')
+#16 E:\workspace\car_glass\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 E:\workspace\car_glass\webroot\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/admin/loginAction
+HTTP_REFERER=http://car-glass.dev/admin/login
+---
+2014/09/01 14:11:47 [error] [exception.CException] exception 'CException' with message 'Property "CPhpAuthManager.connectionID" is not defined.' in E:\workspace\car_glass\framework\base\CComponent.php:173
+Stack trace:
+#0 E:\workspace\car_glass\framework\YiiBase.php(220): CComponent->__set('connectionID', 'db')
+#1 E:\workspace\car_glass\framework\base\CModule.php(386): YiiBase::createComponent(Array)
+#2 E:\workspace\car_glass\framework\base\CModule.php(103): CModule->getComponent('authManager')
+#3 E:\workspace\car_glass\webroot\protected\models\Admin.php(132): CModule->__get('authManager')
+#4 E:\workspace\car_glass\webroot\protected\controllers\AdminController.php(197): Admin->login('admin', '123456')
+#5 E:\workspace\car_glass\framework\web\actions\CInlineAction.php(49): AdminController->actionLoginAction()
+#6 E:\workspace\car_glass\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 E:\workspace\car_glass\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 E:\workspace\car_glass\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 E:\workspace\car_glass\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 E:\workspace\car_glass\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 E:\workspace\car_glass\framework\web\CController.php(291): CFilterChain->run()
+#13 E:\workspace\car_glass\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 E:\workspace\car_glass\framework\web\CWebApplication.php(282): CController->run('loginAction')
+#15 E:\workspace\car_glass\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/loginActi...')
+#16 E:\workspace\car_glass\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 E:\workspace\car_glass\webroot\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/admin/loginAction
+HTTP_REFERER=http://car-glass.dev/admin/login
+---

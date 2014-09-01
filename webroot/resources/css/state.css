@@ -1,0 +1,132 @@
+/**
+ * 页面部件状态样式
+ **/
+ .animated {
+	-webkit-animation-duration: .5s;
+     -moz-animation-duration: .5s;
+     -ms-animation-duration: .5s;
+	     -o-animation-duration: .5s;
+	        animation-duration: .5s;
+	-webkit-animation-fill-mode: both;
+	   -moz-animation-fill-mode: both;
+	     -o-animation-fill-mode: both;
+	        animation-fill-mode: both;
+}
+.zoomIn {
+	-webkit-animation-name: zoomIn;
+    -moz-animation-name: zoomIn;
+    -ms-animation-name: zoomIn;
+	-o-animation-name: zoomIn;
+	animation-name: zoomIn;
+}
+
+@-webkit-keyframes zoomIn {
+	0% {
+		visibility: visible;
+		-webkit-transform: scale(.1);
+	}
+	100% {
+		visibility: visible;
+		-webkit-transform: scale(1);
+	}
+}
+@-moz-keyframes zoomIn {
+	0% {
+		visibility: visible;
+		-moz-transform: scale(.3);
+	}
+	100% {
+		visibility: visible;
+		-moz-transform: scale(1);
+	}
+}
+@-o-keyframes zoomIn {
+	0% {
+		visibility: visible;
+		-o-transform: scale(.3);
+	}
+	100% {
+		visibility: visible;
+		-o-transform: scale(1);
+	}
+}
+@-ms-keyframes zoomIn {
+    0% {
+        visibility: visible;
+        -o-transform: scale(.3);
+    }
+    100% {
+        visibility: visible;
+        -ms-transform: scale(1);
+    }
+}
+@keyframes zoomIn {
+	0% {
+		visibility: visible;
+		transform: scale(.3);
+	}
+	100% {
+		visibility: visible;
+		transform: scale(1);
+	}
+}
+
+@-webkit-keyframes flip {
+	0% {
+		-webkit-transform: perspective(400px) rotateY(90deg) scale(.6);
+		-webkit-animation-timing-function: ease-out;
+		visibility: visible;
+	}
+	100% {
+		-webkit-transform: perspective(400px) rotateY(360deg) scale(1);
+		-webkit-animation-timing-function: ease-in;
+		visibility: visible;
+	}
+}
+@-moz-keyframes flip {
+	0% {
+		-moz-transform: perspective(400px) rotateY(90deg) scale(.6);
+		-moz-animation-timing-function: ease-out;
+		visibility: visible;
+	}
+	100% {
+		-moz-transform: perspective(400px) rotateY(360deg) scale(1);
+		-moz-animation-timing-function: ease-in;
+		visibility: visible;
+	}
+}
+@-o-keyframes flip {
+	0% {
+		-o-transform: perspective(400px) rotateY(90deg) scale(.6);
+		-o-animation-timing-function: ease-out;
+		visibility: visible;
+	}
+	100% {
+		-o-transform: perspective(400px) rotateY(360deg) scale(1);
+		-o-animation-timing-function: ease-in;
+		visibility: visible;
+	}
+}
+@keyframes flip {
+	0% {
+		transform: perspective(400px) rotateY(90deg) scale(.6);
+		animation-timing-function: ease-out;
+		visibility: visible;
+	}
+	100% {
+		transform: perspective(400px) rotateY(360deg) scale(1);
+		animation-timing-function: ease-in;
+		visibility: visible;
+	}
+}
+
+.flip {
+	-webkit-backface-visibility: visible !important;
+	-webkit-animation-name: flip;
+	-moz-backface-visibility: visible !important;
+	-moz-animation-name: flip;
+	-o-backface-visibility: visible !important;
+	-o-animation-name: flip;
+	backface-visibility: visible !important;
+	animation-name: flip;
+}

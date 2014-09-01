@@ -1,0 +1,181 @@
+body {
+    background-color: #E9E9E9;
+}
+
+.productInfo {
+    min-height: 200px;
+    box-shadow: #CACACA 1px 2px 4px;
+    background-color: #fff;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.productInfo .container {
+    width: 640px;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+.productInfo .back {
+    width: 72px;
+    font-size: 14px;
+    height: 34px;
+    line-height: 34px;
+    background: #CA032A;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.productInfo .redLine {
+    font-size: 0;
+    background-color: #CA032A;
+    height: 1px;
+    width: 990px;
+    margin: 0 auto;
+}
+
+.productInfo .userInfo {
+
+}
+
+.productInfo .userInfo .userLogo {
+    float: left;
+    border: solid 1px #ccc;
+}
+
+.productInfo .userInfo .userLogo img {
+    width: 180px;
+    height: 180px;
+}
+
+.productInfo .userInfo .infoList {
+    float: left;
+    width: 450px;
+    color: #525252;
+}
+
+.productInfo .userInfo .infoList .title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #0E275D;
+    height: 35px;
+    line-height: 32px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.productInfo .userInfo .infoList .title b {
+    display: block;
+    border: solid 17px #0E275D;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    position: absolute;
+    top: 0;
+    right: -34px;
+}
+
+.productInfo .userInfo .infoList .content {
+    line-height: 22px;
+    padding: 5px 20px;
+}
+
+.productInfo .userInfo .infoList .content div {
+    font-weight: bold;
+    float: left;
+    width: 200px;
+}
+
+.productInfo .userInfo .infoList .content div span {
+    color: #0E275D;
+}
+
+.productInfo .workInfo {
+    color: #5E5E5E;
+}
+
+.productInfo .workInfo .title {
+    color: #000000;
+    font-weight: bold;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+.productInfo .workInfo .content {
+    line-height: 22px;
+    padding-bottom: 10px;
+}
+
+.comment {
+    background-color: #E9E9E9;
+    padding: 15px;
+    border-radius: 2px;
+}
+
+.comment textarea {
+    background-color: #fff;
+    width: 588px;
+    height: 85px;
+    display: block;
+    border: none;
+    border-top: solid 1px #E7E7E7;
+    border-left: solid 1px #E7E7E7;
+    border-radius: 2px;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.comment .redButton {
+    width: 52px;
+    font-size: 12px;
+    height: 25px;
+    background: #CA032A;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    float: right;
+}
+
+.comment .revertList {
+    clear: both;
+    padding-top: 6px;
+}
+
+.comment .revertList .revert {
+    border-top: solid 1px #CFCFCF;
+    padding: 10px;
+}
+
+.comment .revertList .revert .icon {
+    width: 32px;
+    height: 32px;
+    float: left;
+    overflow: hidden;
+    padding: 4px 0;
+}
+
+.comment .revertList .revert .icon img {
+    width: 32px;
+}
+
+.comment .revertList .revert .revertContent {
+    width: 540px;
+    float: left;
+    line-height: 22px;
+    margin-left: 15px;
+    color: #666666;
+}
+
+.comment .revertList .revert .revertContent strong {
+    color: #CA0A30;
+    font-weight: bold;
+    font-size: 14px;
+}
