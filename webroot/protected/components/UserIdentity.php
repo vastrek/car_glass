@@ -21,13 +21,24 @@ class UserIdentity extends CUserIdentity
 			// username => password
 			'demo'=>'demo',
 			'admin'=>'admin',
+			'frank'=>'123456'
 		);
 		if(!isset($users[$this->username]))
 			$this->errorCode=self::ERROR_USERNAME_INVALID;
 		elseif($users[$this->username]!==$this->password)
 			$this->errorCode=self::ERROR_PASSWORD_INVALID;
-		else
+		else{
+			
+	        $auth=Yii::app()->authManager;
+	        if(!$auth->isAssigned("root",$this->username))
+	        {
+	            if($auth->assign("root",$this->username))
+	            {
+	                Yii::app()->authManager->save();
+	            }
+	        }			
 			$this->errorCode=self::ERROR_NONE;
+		}
 		return !$this->errorCode;
 	}
 }

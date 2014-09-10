@@ -14,3 +14,9 @@ model Admin admin
 crud Admin
 
 
+auth:
+1.文件：
+car_glass\webroot\protected\data\auth.php
+2.数据库
+\framework\web\auth\schema-mysql.sql
+

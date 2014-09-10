@@ -32,7 +32,7 @@ class AdminController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','login','loginAction','logout'),
+				'actions'=>array('view','login','loginAction','logout'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -43,9 +43,11 @@ class AdminController extends Controller
 				'actions'=>array('admin','delete'),
 				'users'=>array('admin'),
 			),
+			
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('index'),
-				'roles'=>array('root'),
+				//'users'=>array('frank'),
+				'roles'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -133,7 +135,15 @@ class AdminController extends Controller
 	 */
 	public function actionIndex()
 	{
-		var_dump(Yii::app()->user) ;
+		echo Yii::app()->user->name ;
+		//echo Yii::app()->user->roles ;
+		//var_dump(Yii::app()->user) ;
+		if(Yii::app()->user->checkAccess('login'))
+		{
+		    echo "login success" ;
+		}else{
+			echo "login fail" ;
+		}
 		$this->render('index');
 	}
 
@@ -209,6 +219,7 @@ class AdminController extends Controller
 	 * 退出后台
 	 */
 	public function actionLogout(){
+		Yii::app()->user->logout();
 		unset(Yii::app()->session['admin']);
 		$this->redirect(array('login'));
 	}

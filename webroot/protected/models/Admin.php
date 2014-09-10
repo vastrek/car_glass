@@ -127,13 +127,9 @@ class Admin extends CActiveRecord
 			$this->_identity->authenticate();
 		}
 		if($this->_identity->errorCode===AdminIdentity::ERROR_NONE){
+
 			$duration=$this->rememberMe ? 3600*24*30 : 0; // 30 days
 			Yii::app()->user->login($this->_identity,$duration);
-			$auth=Yii::app()->authManager;
-			$bizRule='return !Yii::app()->user->isGuest;';
-			$auth->createRole('root', 'administrator', $bizRule);	
-			$bizRule='return Yii::app()->user->isGuest;';
-			$auth->createRole('guest', 'guest user', $bizRule);					
 			//Yii::app()->session['admin'] = $admin;
 			return true;
 		}else{
